@@ -33,3 +33,13 @@ form input {
   height: 3rem;
   padding-left: 0.5rem;
 }
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.dropdown i {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
