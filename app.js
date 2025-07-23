@@ -8,6 +8,7 @@ const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
 const msg = document.querySelector(".msg");
 
+// Function to update the flag image based on selected currency
 for (let select of dropdowns) {
   for (currCode in countryList) {
     let newOption = document.createElement("option");
@@ -25,3 +26,20 @@ for (let select of dropdowns) {
     updateFlag(evt.target);
   });
 }
+const updateExchangeRate = async () => {
+  let amount = document.querySelector(".amount input");
+  let amtVal = amount.value;
+  if (amtVal === "" || amtVal < 1) {
+    amtVal = 1;
+    amount.value = "1";
+  }
+  const URL = `${BASE_URL}/${fromCurr.value}`;
+  let response = await fetch(URL);
+  let data = await response.json();
+  let rate = data.conversion_rates;
+  console.log(rate);
+  let toCurrCode = toCurr.value;
+  let finalAmount = amtVal * rate[toCurrCode];
+  console.log(finalAmount);
+  msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+};
