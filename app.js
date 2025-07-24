@@ -26,6 +26,7 @@ for (let select of dropdowns) {
     updateFlag(evt.target);
   });
 }
+// Function to update the exchange rate based on selected currencies
 const updateExchangeRate = async () => {
   let amount = document.querySelector(".amount input");
   let amtVal = amount.value;
@@ -52,6 +53,7 @@ const updateFlag = (element) => {
   img.src = newSrc;
 };
 
+// Event listeners for button click and window load
 btn.addEventListener("click", (evt) => {
   evt.preventDefault();
   updateExchangeRate();
