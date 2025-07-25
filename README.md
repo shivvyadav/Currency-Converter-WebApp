@@ -21,8 +21,8 @@ const BASE_URL = "https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest";
 
 ## 🧠 How It Works
 
-On page load, the default conversion is set (USD to NPR).<br/>
-Users can enter an amount and select currencies from dropdowns.<br/>
-The app fetches the latest exchange rates from the API.<br/>
-It updates the conversion message with the final amount.<br/>
-Flag images dynamically update based on currency selection.<br/>
+-On page load, the default conversion is set (USD to NPR).<br/>
+-Users can enter an amount and select currencies from dropdowns.<br/>
+-The app fetches the latest exchange rates from the API.<br/>
+-It updates the conversion message with the final amount.<br/>
+-Flag images dynamically update based on currency selection.<br/>
